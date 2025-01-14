@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h3>CV Submission form</h3>
+    </div>
+
+    <!-- ..... -->
+
+    <div class="cv-instructions">
+      <h3>Instructions for CV Submission</h3>
+      <ol>
+        <li>
+          <strong>Tailor Your CV</strong>: Customize your CV to match the
+          specific job you're applying for. Highlight relevant experiences,
+          skills, and accomplishments that align with the job description.
+        </li>
+        <li>
+          <strong>Follow Application Guidelines</strong>: Carefully read the
+          submission guidelines provided by the employer. This includes file
+          format (e.g., PDF), naming conventions, and any additional documents
+          or information required.
+        </li>
+        <li>
+          <strong>Proofread and Edit</strong>: Ensure your CV is free of typos,
+          grammatical errors, and formatting issues. A well-polished CV reflects
+          your attention to detail and professionalism.
+        </li>
+        <li>
+          <strong>Include a Cover Letter</strong>: Attach a cover letter that
+          complements your CV. Use the cover letter to introduce yourself,
+          explain your interest in the position, and briefly highlight your most
+          relevant qualifications.
+        </li>
+      </ol>
+    </div>
+
+    <!-- ..... -->
+
+    <form action="createcv" class="form-parent">
+      <div class="container d-flex justify-content-around">
+        <div class="left-section">
+          <h2>Enter Your Personal Details</h2>
+
+          <label for="firstName">First Name:</label><br />
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            required
+          /><br /><br />
+
+          <label for="lastName">Last Name:</label><br />
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            required
+          /><br /><br />
+
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" required /><br /><br />
+
+          <label for="phone">Phone Number:</label><br />
+          <input type="tel" id="phone" name="phone" required /><br /><br />
+
+          <label>Gender:</label><br />
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label><br />
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label><br />
+          <input type="radio" id="other" name="gender" value="other" />
+          <label for="other">Other</label><br /><br />
+
+          <label for="position">Position Applying For:</label><br />
+          <input
+            type="text"
+            id="position"
+            name="position"
+            required
+          /><br /><br />
+        </div>
+        <!-- ...... -->
+        <div class="right-section">
+          <h5>Skills</h5>
+
+          <p>
+            Please list your skills below. Select all that apply to showcase
+            your proficiency and expertise in different areas.
+          </p>
+
+          <label for="skills">Skills:</label><br />
+          <input
+            type="checkbox"
+            id="programming"
+            name="skills"
+            value="programming"
+          />
+          <label for="programming">Programming</label><br />
+          <input type="checkbox" id="design" name="skills" value="design" />
+          <label for="design">Design</label><br />
+          <input
+            type="checkbox"
+            id="marketing"
+            name="skills"
+            value="marketing"
+          />
+          <label for="marketing">Marketing</label><br />
+          <input type="checkbox" id="writing" name="skills" value="writing" />
+          <label for="writing">Writing</label><br /><br />
+
+          <label for="additionalInfo">Additional Information:</label><br />
+          <textarea
+            id="additionalInfo"
+            name="additionalInfo"
+            rows="4"
+            cols="50"
+          ></textarea
+          ><br /><br />
+
+          <p>
+            Please provide any additional information that you think is relevant
+            to your application. This could include details about your
+            experience, why you are interested in the position, or any other
+            information you believe is important for us to consider.
+          </p>
+        </div>
+        <!-- ..... -->
+      </div>
+      <!-- ....   -->
+      <div class="education-section">
+        <h5>Education Details</h5>
+
+        <p>
+          Provide information about your educational background. Fill in details
+          for the relevant fields and feel free to add more information about
+          your college or school.
+        </p>
+
+        <label for="tenth">10th Standard:</label><br />
+        <input
+          type="text"
+          id="tenth"
+          name="tenth"
+          placeholder="Add more information about your school"
+        /><br /><br />
+
+        <label for="twelfth">12th Standard:</label><br />
+        <input
+          type="text"
+          id="twelfth"
+          name="twelfth"
+          placeholder="Add more information about your school"
+        /><br /><br />
+
+        <label for="ug">Undergraduate (UG):</label><br />
+        <input
+          type="text"
+          id="ug"
+          name="ug"
+          placeholder="Add more information about your college"
+        /><br /><br />
+
+        <label for="pg">Postgraduate (PG):</label><br />
+        <input
+          type="text"
+          id="pg"
+          name="pg"
+          placeholder="Add more information about your college"
+        /><br /><br />
+
+        <label for="others">Other Qualifications:</label><br />
+        <input
+          type="text"
+          id="others"
+          name="others"
+          placeholder="Add more information about your college"
+        /><br /><br />
+        <p>
+          Your educational background is a vital part of your profile. It helps
+          us understand your academic journey and the knowledge base that you
+          bring to the table. Whether it's your 10th and 12th standard scores,
+          your undergraduate and postgraduate degrees, or any other
+          qualifications, each detail contributes to a comprehensive view of
+          your capabilities. Please ensure you provide accurate and detailed
+          information about your educational achievements.
+        </p>
+      </div>
+      <div class="experience-section">
+        <h5>Experience Details</h5>
+
+        <p>
+          Please provide details about your previous work experience. This helps
+          us understand your professional background and the skills you have
+          gained over the years.
+        </p>
+
+        <label>Professional Experience:</label><br />
+        <input
+          type="text"
+          id="companyName"
+          name="companyName"
+          placeholder="Company Name"
+        /><br />
+        <label> Experience Type:</label><br />
+
+        <div class="checkbox-container">
+          <div>
+            <input
+              type="checkbox"
+              id="internship"
+              name="experience"
+              value="internship"
+            />
+            <label for="internship">Internship</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="fulltime"
+              name="experience"
+              value="fulltime"
+            />
+            <label for="fulltime">Full-time Job</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="parttime"
+              name="experience"
+              value="parttime"
+            />
+            <label for="parttime">Part-time Job</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="volunteer"
+              name="experience"
+              value="volunteer"
+            />
+            <label for="volunteer">Volunteer Work</label>
+          </div>
+        </div>
+
+        <label for="startDate">Start Date:</label><br />
+        <input type="date" id="startDate" name="startDate" /><br />
+
+        <label for="endDate">End Date:</label><br />
+        <input type="date" id="endDate" name="endDate" /><br />
+
+        <label for="stillWorking">Still Working Here:</label><br />
+        <div class="radio-container">
+          <input
+            type="radio"
+            id="stillWorkingYes"
+            name="stillWorking"
+            value="yes"
+          />
+
+          <label for="stillWorkingYes">Yes</label>
+          <input
+            type="radio"
+            id="stillWorkingNo"
+            name="stillWorking"
+            value="no"
+          />
+          <label for="stillWorkingNo">No</label><br />
+        </div>
+
+        <label for="salary">Salary:</label><br />
+        <input
+          type="number"
+          id="salary"
+          name="salary"
+          placeholder="Salary"
+        /><br /><br />
+
+        <label for="experienceDetails">Experience Details:</label><br />
+        <textarea
+          id="experienceDetails"
+          name="experienceDetails"
+          rows="4"
+          cols="50"
+          placeholder="Describe your roles, responsibilities, and achievements."
+        ></textarea
+        ><br /><br />
+      </div>
+      <div class="Customize">
+        <a href="#" id="showContent">+add more section</a>
+      </div>
+      <!-- ......hidden-display...... -->
+      <div class="container2 d-flex">
+        <div class="left-side" id="hidden-content">
+          <div class="form-container d-flex">
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckChecked1"
+              />
+
+              <label
+                class="form-check-label"
+                for="flexSwitchCheckChecked1"
+                id="interest"
+                >Interests</label
+              >
+            </div>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckChecked2"
+              />
+              <label class="form-check-label" for="flexSwitchCheckChecked2"
+                >Achievements & Awards</label
+              >
+            </div>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckChecked3"
+              />
+              <label class="form-check-label" for="flexSwitchCheckChecked3"
+                >Activities</label
+              >
+            </div>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckChecked4"
+              />
+              <label class="form-check-label" for="flexSwitchCheckChecked4"
+                >Languages</label
+              >
+            </div>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckChecked5"
+              />
+              <label class="form-check-label" for="flexSwitchCheckChecked5"
+                >Additional Info</label
+              >
+            </div>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckChecked6"
+              />
+              <label class="form-check-label" for="flexSwitchCheckChecked6"
+                >Reference</label
+              >
+            </div>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckChecked7"
+              />
+              <label class="form-check-label" for="flexSwitchCheckChecked7"
+                >Signature</label
+              >
+            </div>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckChecked8"
+              />
+              <label class="form-check-label" for="flexSwitchCheckChecked8"
+                >Projects</label
+              >
+            </div>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckChecked9"
+              />
+              <label class="form-check-label" for="flexSwitchCheckChecked9"
+                >Cover Letter</label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="right-side" id="hidden-content2">
+          <div class="hint-section d-flex flex-column " id="cvDetails">
+            <p id="para1">
+              <strong>Example:</strong>photoshop,coding,editing <input type="text" name="" id=""></p>
+            <p id="para2"><strong>Example:</strong>include your certifications<input type="text" name="" id=""></p>
+            <p id="para3"><strong>Example:</strong>watching,activities <input type="text" name="" id=""></p>
+            <p id="para4"><strong>Example:</strong>english etc.read and write <input type="text" name="" id=""></p>
+            <p id="para5"><strong>Example:</strong>blog,book,articles <input type="text" name="" id=""></p>
+            <p id="para6"><strong>Example:</strong>inclide civic activities volunteering family details <input type="text" name="" id=""></p>
+            <p id="para7"><strong>Example:</strong> signature<input type="text" name="" id=""></p>
+            <p id="para8"> <strong>Example:</strong> any completed projects details<input type="text" name="" id=""></p>
+            <p id="para9"><strong>Example:</strong>internship career change<input type="text" name="" id=""></p>
+          </div>
+          <!-- Add more detailed hints or examples here as needed -->
+        </div>
+      </div>
+
+      <!-- ....... -->
+
+      <div class="btn d-flex justify-content-center align-items-center">
+        <button id="createCV" type="submit" class="w-25">Create CV</button>
+      </div>
+    </form>
+
+    <!-- ...jacascript... -->
+
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- ...css style... -->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      .header {
+        position: relative;
+        width: 100%;
+        height: 80px;
+        /* background-image: url("https://wallpaperaccess.com/full/746123.jpg"); */
+        color: hsl(210, 100%, 30%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: hsl(210, 100%, 95%);
+      }
+
+      .header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0;
+        z-index: 1;
+      }
+
+      .header h3 {
+        color: hsl(210, 100%, 30%);
+        font-weight: lighter;
+        position: relative;
+        z-index: 2;
+        margin: 0;
+        font-family: "Georgia", serif;
+        font-size: 40px;
+      }
+
+      .container .left-section,
+      .container .right-section,
+      .education-section,
+      .experience-section {
+        background-color: hsl(210, 100%, 95%);
+        padding: 20px;
+        margin: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .container .left-section h2,
+      .container .right-section h5,
+      .education-section h5,
+      .experience-section h5 {
+        color: hsl(210, 100%, 30%);
+        font-family: "Georgia", serif;
+      }
+
+      .container .left-section label,
+      .container .right-section label,
+      .education-section label,
+      .experience-section label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+      .container .left-section input[type="text"],
+      .container .left-section input[type="email"],
+      .container .left-section input[type="tel"],
+      .container .left-section input[type="radio"],
+      .container .right-section input[type="checkbox"],
+      .education-section input[type="text"],
+      .experience-section input[type="checkbox"] {
+        margin: 10px 0;
+        padding: 10px;
+        width: calc(100% - 20px);
+        border: 1px solid hsl(210, 50%, 80%);
+        border-radius: 5px;
+      }
+
+      .container .right-section textarea,
+      .experience-section textarea {
+        width: calc(100% - 20px);
+        border: 1px solid hsl(210, 50%, 80%);
+        border-radius: 5px;
+        padding: 10px;
+      }
+
+      button#createCV {
+        background-color: hsl(210, 79%, 59%);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-family: "Arial", sans-serif;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button#createCV:hover {
+        background-color: hsl(210, 100%, 40%);
+      }
+
+      /* Additional ideas */
+      label span.required {
+        color: red;
+        margin-left: 5px;
+      }
+
+      .container .left-section input[type="text"]:invalid,
+      .container .right-section input[type="checkbox"]:invalid,
+      .education-section input[type="text"]:invalid,
+      .experience-section textarea:invalid {
+        border-color: red;
+      }
+      .btn {
+        background-color: hsl(210, 100%, 95%);
+        padding: 20px;
+        margin: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+      }
+      .cv-instructions {
+        background-color: hsl(210, 100%, 95%);
+        padding: 20px;
+        margin: 20px auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        /* text-align: center; */
+        width: 90%;
+      }
+      .cv-instructions h3 {
+        text-align: center;
+        color: hsl(210, 100%, 30%);
+      }
+      .cv-instructions h3 li {
+        position: relative;
+        z-index: 2;
+        margin: 0;
+        font-family: "Georgia", serif;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      input[type="text"] {
+        width: 25%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .checkbox-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .radio-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+      }
+
+      input[type="checkbox"] + label,
+      input[type="radio"] + label {
+        font-weight: normal;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      input[type="date"],
+      input[type="number"] {
+        width: 20%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .Customize a {
+        text-decoration: none;
+        font-size: 20px;
+        position: relative;
+        z-index: 2;
+        font-family: "Georgia", serif;
+        color: hsl(210, 100%, 30%);
+      }
+      .Customize {
+        text-align: center;
+        font-size: 1em;
+        /* font-weight: bold; */
+
+        background-color: hsl(210, 100%, 95%);
+
+        margin: 20px auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 97%;
+      }
+    </style>
+  </body>
+</html>
